@@ -1,0 +1,5 @@
+%h2= 'Route test'
+#content
+  %label= 'Inspected controller data'
+  %pre
+    = @controller.inspect.split(',').join("\n")
