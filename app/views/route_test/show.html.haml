@@ -1,5 +1,11 @@
 %h2= 'Route test'
 #content
-  %label= 'Inspected controller data'
-  %pre
-    = @controller.inspect.split(',').join("\n")
+  #methods
+  %label= 'You can call this methods on /route controller'
+  %ul
+    - @available_methods.each do |m|
+      %li= m
+  #controller
+    %label= 'Inspected controller data'
+    %pre
+      = @controller.inspect.split(',').join("\n")

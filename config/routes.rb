@@ -11,6 +11,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :entities
 
+  map.connect '/route/action_test/:id', :controller => 'route_test', :action => 'action_test'
+  map.connect '/route/:action/:id.:format', :controller => 'route_test'
+
   # Sample resource route with options:
   #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
 
